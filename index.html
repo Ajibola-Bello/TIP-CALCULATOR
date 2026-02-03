@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <h1>SPLI <br /> TTER</h1>
+  </div>
+
+  <main class="container">
+
+    <!-- Bill -->
+    <section class="bill-input">
+      <label for="bill">Bill</label>
+      <div class="input-wrapper">
+        <img src="images/icon-dollar.svg" alt="">
+        <input type="number" id="bill" placeholder="0">
+      </div>
+    </section>
+
+    <!-- Tip -->
+    <section class="tip-menu">
+      <h3>Select Tip %</h3>
+      <div class="tip-buttons" id="tip-buttons">
+        <button class="tip-btn" data-tip="5">5%</button>
+        <button class="tip-btn" data-tip="10">10%</button>
+        <button class="tip-btn" data-tip="15">15%</button>
+        <button class="tip-btn" data-tip="25">25%</button>
+        <button class="tip-btn" data-tip="50">50%</button>
+        <input type="number" id="custom-tip" placeholder="Custom">
+      </div>
+    </section>
+
+    <!-- People -->
+    <section class="peoples-no">
+      <div class="people-label">
+        <label for="number-people">Number of People</label>
+        <span class="error-text">Can't be zero</span>
+      </div>
+      <div class="people-wrapper">
+        <img src="images/icon-person.svg" alt="">
+        <input type="number" id="number-people" placeholder="0">
+      </div>
+    </section>
+
+    <!-- Result -->
+    <section class="result">
+      <div class="result-row">
+        <div class="result-text">
+          <p>Tip Amount</p>
+          <span>/ person</span>
+        </div>
+        <h2 id="tip-amount">$0.00</h2>
+      </div>
+
+      <div class="result-row">
+        <div class="result-text">
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
+        <h2 id="total">$0.00</h2>
+      </div>
+
+      <button id="reset">Reset</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

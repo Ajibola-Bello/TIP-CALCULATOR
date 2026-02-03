@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* ### Primary */
+
+  --clr-primary-Green-400: hsl(172, 67%, 45%);
+
+  /* ### Neutral */
+
+  --clr-neutral-Green-900: hsl(183, 100%, 15%);
+  --clr-neutral-Grey-500: hsl(186, 14%, 43%);
+  --clr-neutral-Grey-400: hsl(184, 14%, 56%);
+  --clr-neutral-Grey-200: hsl(185, 41%, 84%);
+  --clr-neutral-Grey-50: hsl(189, 47%, 97%);
+  --neutral-White: hsl(0, 100%, 100%);
+
+  --FS: 24px;
+  --FW: 700;
+  --FF: "Space Mono", Cursive;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--FS);
+  font-weight: 700;
+  font-family: var(--FF);
+  min-height: 100vh;
+  background-color: var(--clr-neutral-Grey-200);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+h1 {
+  color: var(--clr-neutral-Grey-500);
+  font-size: 30px;
+  text-align: center;
+  padding: 2rem 0;
+  letter-spacing: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--neutral-White);
+  border-radius: 20px;
+}
+
+.bill-input,
+.peoples-no,
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bill-input {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.bill-input label {
+  font-size: 0.9rem;
+  color: var(--clr-neutral-Grey-500);
+}
+
+.bill-input input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--clr-neutral-Grey-50);
+  text-align: right;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  padding-left: 2.5rem;
+  height: 3rem;
+}
+
+.input-wrapper img {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-wrapper,
+.people-wrapper {
+  width: 100%;
+}
+
+.input-wrapper input,
+.people-wrapper input {
+  width: 100%;
+}
+
+/* tip section design */
+
+.tip-menu {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.tip-menu h3 {
+  font-size: 0.9rem;
+  color: var(--clr-neutral-Grey-500);
+  margin-bottom: 1rem;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.tip-btn {
+  background-color: var(--clr-neutral-Green-900);
+  color: var(--neutral-White);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tip-btn:hover {
+  background-color: var(--clr-primary-Green-400);
+  color: var(--clr-neutral-Green-900);
+}
+
+#custom-tip {
+  background-color: var(--clr-neutral-Grey-50);
+  color: var(--clr-neutral-Green-900);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  text-align: right;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#custom-tip::placeholder {
+  color: var(--clr-neutral-Grey-400);
+}
+
+.tip-buttons > * {
+  height: 3rem;
+  width: 100%;
+}
+
+/* No of people design */
+
+.peoples-no {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.peoples-no label {
+  font-size: 0.9rem;
+  color: var(--clr-neutral-Grey-500);
+}
+
+.peoples-no input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--clr-neutral-Grey-50);
+  text-align: right;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.people-wrapper {
+  position: relative;
+}
+
+.people-wrapper input {
+  padding-left: 2.5rem;
+  height: 3rem;
+}
+
+.people-wrapper img {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* result design */
+
+.result {
+  background-color: var(--clr-neutral-Green-900);
+  width: 90%;
+  margin-bottom: 0.75rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-text p {
+  color: var(--neutral-White);
+  font-size: 0.9rem;
+}
+
+.result-text span {
+  color: var(--clr-neutral-Grey-400);
+  font-size: 0.8rem;
+}
+
+.result h2 {
+  color: var(--clr-primary-Green-400);
+  font-size: 1.8rem;
+}
+
+#reset {
+  background-color: var(--clr-primary-Green-400);
+  color: var(--clr-neutral-Green-900);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* active tip button */
+.tip-btn.active {
+  background-color: var(--clr-primary-Green-400);
+  color: var(--clr-neutral-Green-900);
+}
+
+/* error state */
+.people-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.7rem;
+  display: none;
+}
+
+input.error {
+  border: 2px solid red;
+}
+
+/* ================= DESKTOP VIEW (CORRECT) ================= */
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 920px;
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 20px;
+    grid-template-areas:
+      "input result"
+      "inputs result"
+      "people result";
+  }
+
+  .bill-input {
+    grid-area: input;
+  }
+  .tip-menu {
+    grid-area: inputs;
+  }
+  .peoples-no {
+    grid-area: people;
+  }
+
+  /* This makes the first 3 sections stack nicely on the left */
+  .bill-input,
+  .tip-menu,
+  .peoples-no {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* spacing between the left sections */
+  .tip-menu {
+    margin: 2rem 0;
+  }
+
+  /* Result card on the right */
+  .result {
+    grid-area: result;
+    margin: 0;
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  /* Bigger numbers like the design */
+  .result h2 {
+    font-size: 2.8rem;
+  }
+
+  /* Tip buttons become 3 columns */
+  .tip-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Reset button sticks to bottom */
+  #reset {
+    margin-top: auto;
+  }
+}
